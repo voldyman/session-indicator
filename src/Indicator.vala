@@ -10,7 +10,9 @@ namespace SesIndicator {
         private AppIndicator.Indicator ind;
         private Gtk.Menu ind_menu;
 
-        private Gtk.MenuItem logout;
+		private Gtk.MenuItem @lock;
+		private Gtk.SeparatorMenuItem separator;
+		private Gtk.MenuItem logout;
         private Gtk.MenuItem reboot;
         private Gtk.MenuItem shutdown;
 
@@ -31,10 +33,14 @@ namespace SesIndicator {
         private void setup_menu () {
             ind_menu = new Gtk.Menu ();
 
+			@lock = new Gtk.MenuItem.with_label ("Lock");
+			separator = new Gtk.SeparatorMenuItem ();
             logout = new Gtk.MenuItem.with_label ("Logout");
             reboot = new Gtk.MenuItem.with_label ("Reboot");
             shutdown = new Gtk.MenuItem.with_label ("Shutdown");
 
+			ind_menu.append (@lock);
+			ind_menu.append (separator);
             ind_menu.append (logout);
             ind_menu.append (reboot);
             ind_menu.append (shutdown);
@@ -45,6 +51,9 @@ namespace SesIndicator {
         }
 
 		private void connect_signals () {
+			@lock.activate.connect ( () => {
+			  	app.ss.lock ();
+		   	});
 			logout.activate.connect ( () => {
 				app.sm.logout ();
 			});
