@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=Session Indicator
+GenericName=Session Indicator
+Comment=An indicator which allows you to easily lock, logout, shutdown and reboot your computer.
+Categories=GTK;Utility;
+Exec=session-indicator
+Icon=application-default-icon
+Terminal=false
+Type=Application
+X-GNOME-Gettext-Domain=session-indicator
+X-GNOME-Keywords=session;indicator;shutdown;logout;lock;reboot;
