@@ -30,7 +30,6 @@ vala_precompile (VALA_C ${EXEC_NAME}
   src/Indicator.vala
   src/SessionMan.vala
   src/ScreenSaver.vala
-  src/ConformationDialog.vala
 PACKAGES
   gtk+-3.0
   appindicator3-0.1

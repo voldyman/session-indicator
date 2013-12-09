@@ -63,31 +63,6 @@ namespace SesIndicator {
 			reboot.activate.connect ( () => {
 				app.sm.reboot ();
 			});
-		}
-/*		private void connect_signals () {
-			logout.activate.connect ( () => {
-					var d = new ConformationDialog.for_logout ();
-					if (d.run () == 0) {
-						app.sm.logout ();
-					} 
-					d.destroy ();
-				});
-			shutdown.activate.connect ( () => {
-					var d = new ConformationDialog.for_shutdown ();
-					if (d.run () == 0) {
-						app.sm.shutdown ();
-					} 
-					d.destroy ();
-				});
-			reboot.activate.connect ( () => {
-					var d = new ConformationDialog.for_reboot ();
-					if (d.run () == 0) {
-						app.sm.reboot ();
-					} 
-					d.destroy ();
-				});
-		}
-*/
-		
+		}		
     }
 }
