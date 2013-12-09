@@ -1,12 +1,12 @@
-project (session-indicator)
+project (app-indicator-session)
 
 cmake_minimum_required (VERSION 2.6)
 
 LIST (APPEND CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
 set (DATADIR "${CMAKE_INSTALL_PREFIX}/share")
-set (PKGDATADIR "${DATADIR}/session-indicator")
-set (EXEC_NAME "session-indicator")
+set (PKGDATADIR "${DATADIR}/${CMAKE_PROJECT_NAME}")
+set (EXEC_NAME "${CMAKE_PROJECT_NAME}")
 set (RELEASE_NAME "dingaling")
 set (VERSION "0.1")
 set (VERSION_INFO "indicator to Lock, Logout, Shutdown and Reboot system")
@@ -42,5 +42,5 @@ add_executable(${EXEC_NAME} ${VALA_C})
 
 install (TARGETS ${EXEC_NAME} RUNTIME DESTINATION bin)
 
-install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/session-indicator.desktop DESTINATION ${DATADIR}/applications/)
+install (FILES ${CMAKE_CURRENT_SOURCE_DIR}/data/${CMAKE_PROJECT_NAME}.desktop DESTINATION ${DATADIR}/applications/)
 
