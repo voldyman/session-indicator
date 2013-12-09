@@ -18,6 +18,9 @@ add_definitions (${DEPS_CFLAGS})
 link_libraries (${DEPS_LIBRARIES})
 link_directories(${DEPS_LIBRARY_DIRS})
 
+# Comment this out to enable C compiler warnings
+add_definitions (-w)
+
 find_package (Vala REQUIRED)
 include (ValaVersion)
 
