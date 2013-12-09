@@ -10,7 +10,7 @@ Build-Depends: cmake,
 Standards-Version: 3.9.4
 Homepage: https://github.com/voldyman/session-indicator
 
-Package: session-indicator
+Package: app-indicator-session
 Architecture: any
 Depends: ${misc:Depends}, ${shlibs:Depends}
 Description: indicator to Lock, Logout, Shutdown and Reboot system
