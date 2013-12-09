@@ -1,4 +1,4 @@
-Source: session-indicator
+Source: app-indicator-session
 Section: unknown
 Priority: optional
 Maintainer: Cody Garver <cody@elementaryos.org>
