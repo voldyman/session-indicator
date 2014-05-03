@@ -22,7 +22,7 @@ namespace SesIndicator {
 			this.app = app;
 
 			ind = new AppIndicator.Indicator (title, ICON_NAME,
-											  IndicatorCategory.APPLICATION_STATUS);
+							  IndicatorCategory.APPLICATION_STATUS);
 
 			ind.set_status (IndicatorStatus.ACTIVE);
 
